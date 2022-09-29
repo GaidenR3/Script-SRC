@@ -1,13 +1,11 @@
-k =int(input("Entrez un nombre : "))
+#Lire la saisie de l'utilisateur
+min = int(input("Entrez le min : "))
+max = int(input("Entrez le max : "))
 
-# 1 not being a prime number, is ignored
-if k > 1:
-    for i in range(2, int(k/2)+1):
-         if (k % i) == 0:
-            print("It is not a prime number")
-            break
-    else:
-        print("It is a prime number")
-
-else:
-    print("It is not a prime number")
+for n in range(min,max + 1):
+   if n > 1:
+       for i in range(2,n):
+           if (n % i) == 0:
+               break
+       else:
+           print(n)
